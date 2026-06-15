@@ -2,11 +2,23 @@ interface PageHeroProps {
   title: string
   subtitle: string
   badge?: string
+  videoSrc?: string
 }
 
-export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
+export default function PageHero({ title, subtitle, badge, videoSrc }: PageHeroProps) {
   return (
-    <section className="page-hero-gradient relative py-20 sm:py-24 lg:py-28">
+    <section className="page-hero-gradient relative py-20 sm:py-24 lg:py-28 overflow-hidden">
+      {videoSrc && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover -z-10"
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      )}
       <div className="absolute inset-0 bg-hero-mesh opacity-40" />
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
       <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl" />

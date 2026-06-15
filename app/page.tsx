@@ -93,18 +93,15 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <AnimatedImage
-            src="/images/In House Machine Setup.png"
-            alt="Industrial Automation Background"
-            fill
-            className="object-cover scale-105"
-            priority
-            sizes="100vw"
-            animationType="fadeIn"
-            duration={1000}
-            hoverEffect="none"
-            quality={90}
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/Banner Video/Banner video.mp4" type="video/mp4" />
+          </video>
           <div className="hero-gradient-overlay" />
           <div className="absolute inset-0 bg-hero-mesh opacity-50" />
         </div>
