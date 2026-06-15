@@ -91,14 +91,14 @@ export default function HomePage() {
       <ImagePreloader images={criticalImages} />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+      <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="hero-video-container absolute inset-0 z-0">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            className="hero-video"
           >
             <source src="/Banner Video/Banner video.mp4" type="video/mp4" />
           </video>
