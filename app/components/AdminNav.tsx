@@ -36,7 +36,7 @@ export default function AdminNav() {
             <div className="flex items-center gap-4">
               <Link href="/admin/jobs" className="flex items-center gap-3">
                 <div className="relative w-10 h-10 rounded-xl overflow-hidden ring-2 ring-primary-500/20">
-                  <Image src="/images/Admin LOGO.png" alt="TM Tech Admin" fill className="object-cover" />
+                  <Image src="/images/AdminLogo.png" alt="TM Tech Admin" fill className="object-cover" />
                 </div>
                 <span className="font-bold font-display text-dark-900">TM Tech HR</span>
               </Link>

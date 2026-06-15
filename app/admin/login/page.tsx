@@ -92,7 +92,7 @@ export default function AdminLoginPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-3 mb-6">
             <div className="relative w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-primary-500/30">
-              <Image src="/images/Admin LOGO.png" alt="TM Tech Admin" fill className="object-cover" />
+              <Image src="/images/AdminLogo.png" alt="TM Tech Admin" fill className="object-cover" />
             </div>
             <span className="text-white font-bold font-display text-lg">TM Tech Admin</span>
           </Link>
