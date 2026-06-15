@@ -123,6 +123,80 @@
     @apply relative overflow-hidden bg-gradient-to-br from-dark-950 via-dark-900 to-primary-950;
   }
 
+  /* Desktop/tablet: keep existing behaviour (cover, fills container) */
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+
+  /* MOBILE: make video fully visible (no cropping) and adapt to orientation */
+  @media (max-width: 768px) {
+    .page-hero-gradient {
+      /* let the hero height adapt to width to avoid forced 16:9 cropping */
+      min-height: 0;
+      height: auto;
+      padding-top: 4rem; /* keep vertical spacing for content */
+      padding-bottom: 4rem;
+    }
+
+    .hero-video {
+      /* show the whole video without cropping */
+      object-fit: contain;
+      object-position: center center;
+      background-color: #000; /* letterbox color while video fills */
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* ensure video does not cause horizontal scroll */
+    html, body, .page-hero-gradient {
+      overflow-x: hidden;
+    }
+  }
+
+  /* Portrait orientation on small screens: favor a taller container so important content stays visible */
+  @media (max-width: 768px) and (orientation: portrait) {
+    .page-hero-gradient {
+      height: calc(100vw * 1.25); /* ~4:5 ratio: taller to prioritize central vertical content */
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .hero-video {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  /* Landscape orientation on small screens: constrain height to viewport to keep video visible */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .page-hero-gradient {
+      height: calc(100vh * 0.6); /* 60% of viewport height on small landscape screens */
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
   .cta-section {
     @apply relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white shadow-glow;
   }
