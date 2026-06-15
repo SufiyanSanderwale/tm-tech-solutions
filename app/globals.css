@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    @apply bg-white text-dark-800;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-jakarta), system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 active:from-primary-800 active:to-primary-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 touch-manipulation shadow-lg shadow-primary-600/25 hover:shadow-xl hover:shadow-primary-600/30 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply relative inline-flex items-center justify-center gap-2 bg-dark-900 hover:bg-dark-800 active:bg-dark-950 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 touch-manipulation shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply relative inline-flex items-center justify-center gap-2 border-2 border-white/80 text-white hover:bg-white hover:text-primary-700 font-semibold py-3 px-6 rounded-xl transition-all duration-300 touch-manipulation backdrop-blur-sm;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 bg-white text-primary-700 hover:bg-primary-50 font-semibold py-3 px-6 rounded-xl transition-all duration-300 touch-manipulation shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .btn-mobile {
+    @apply min-h-[44px] min-w-[44px] touch-manipulation;
+  }
+
+  .text-mobile-sm {
+    @apply text-sm sm:text-base;
+  }
+
+  .text-mobile-base {
+    @apply text-base sm:text-lg;
+  }
+
+  .text-mobile-lg {
+    @apply text-lg sm:text-xl;
+  }
+
+  .text-mobile-xl {
+    @apply text-xl sm:text-2xl;
+  }
+
+  .text-mobile-2xl {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  .text-mobile-3xl {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  .text-mobile-4xl {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/60 shadow-glass rounded-2xl;
+  }
+
+  .glass-card-dark {
+    @apply bg-dark-900/80 backdrop-blur-xl border border-white/10 shadow-glass rounded-2xl;
+  }
+
+  .modern-card {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-500 border border-dark-100/80 overflow-hidden;
+  }
+
+  .section-badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-50 text-primary-700 text-sm font-semibold tracking-wide uppercase border border-primary-100;
+  }
+
+  .section-title {
+    @apply text-mobile-3xl font-bold text-dark-900 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-mobile-lg text-dark-500 max-w-3xl leading-relaxed;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 bg-clip-text text-transparent;
+  }
+
+  .hero-gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-br from-dark-950/90 via-dark-900/75 to-primary-950/60;
+  }
+
+  .input-modern {
+    @apply w-full px-4 py-3.5 bg-dark-50/50 border border-dark-200 rounded-xl focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 focus:bg-white transition-all duration-200 placeholder:text-dark-400;
+  }
+
+  .page-hero-gradient {
+    @apply relative overflow-hidden bg-gradient-to-br from-dark-950 via-dark-900 to-primary-950;
+  }
+
+  .cta-section {
+    @apply relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white shadow-glow;
+  }
+
+  .cta-section::before {
+    content: '';
+    @apply absolute inset-0 bg-hero-mesh opacity-60;
+  }
+
+  .nav-link {
+    @apply relative text-dark-600 hover:text-primary-600 font-medium transition-colors duration-200 py-2;
+  }
+
+  .nav-link-active {
+    @apply text-primary-600 font-semibold;
+  }
+
+  .stat-card {
+    @apply text-center p-6 sm:p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .feature-icon {
+    @apply w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-2xl shadow-glow-sm;
+  }
+
+  .divider-gradient {
+    @apply h-px bg-gradient-to-r from-transparent via-primary-300 to-transparent;
+  }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 2s ease-in-out infinite;
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+
+  .animate-zoom-in {
+    animation: zoomIn 0.6s ease-out;
+  }
+
+  @keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out 0.3s both;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .image-loading {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
