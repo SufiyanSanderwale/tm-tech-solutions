@@ -1,3 +1,4 @@
+import { asset } from '@/lib/asset'
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google'
 import './globals.css'
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     siteName: 'TM Tech Solutions',
     images: [
       {
-        url: '/images/LOGO.jpg',
+        url: asset('/images/LOGO.jpg'),
         width: 1200,
         height: 630,
         alt: 'TM Tech Solutions Logo',
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'TM Tech Solutions - Innovative Automation and Fabrication Solutions',
     description: 'Leading provider of innovative automation and fabrication solutions in Pune.',
-    images: ['/images/LOGO.jpg'],
+    images: [asset('/images/LOGO.jpg')],
   },
   robots: {
     index: true,
@@ -100,8 +101,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//localhost:3000" />
-        <link rel="preload" as="image" href="/images/In House Machine Setup.png" />
-        <link rel="preload" as="image" href="/images/LOGO.jpg" />
+        <link rel="preload" as="image" href={asset('/images/In House Machine Setup.png')} />
+        <link rel="preload" as="image" href={asset('/images/LOGO.jpg')} />
       </head>
       <body className={`${inter.className} antialiased`}>
         <GoogleAnalytics />

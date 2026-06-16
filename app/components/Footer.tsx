@@ -1,3 +1,4 @@
+import { asset } from '@/lib/asset'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -15,7 +16,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <div className="relative w-11 h-11 rounded-xl overflow-hidden ring-2 ring-primary-500/30">
                 <Image
-                  src="/images/LOGO.jpg"
+                  src={asset('/images/LOGO.jpg')}
                   alt="TM Tech Solutions Logo"
                   fill
                   className="object-contain"

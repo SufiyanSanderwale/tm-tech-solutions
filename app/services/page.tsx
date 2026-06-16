@@ -1,3 +1,4 @@
+import { asset } from '@/lib/asset'
 import Link from 'next/link'
 import AnimatedImage from '../components/AnimatedImage'
 import AnimatedProcessStep from '../components/AnimatedProcessStep'
@@ -9,48 +10,48 @@ export default function ServicesPage() {
     {
       title: 'Special Purpose Machine (SPM) Design & Manufacturing',
       description: 'From concept to commissioning, we design and build custom SPMs like Pick and Place systems, Assembly lines, Testing machines, and more, tailored to optimize your specific manufacturing processes.',
-      image: '/images/Semi Auto Duct Cutting Machine.png',
+      image: asset('/images/Semi Auto Duct Cutting Machine.png'),
       features: ['Concept to commissioning', 'Pick and Place systems', 'Assembly line automation', 'Testing machines', 'Custom SPM design', 'Process optimization'],
       icon: '⚙️'
     },
     {
       title: 'Fabrication Work',
       description: 'Our expertise spans Stainless Steel (SS), Mild Steel (MS), and Aluminium fabrication. We construct robust industrial structures, machine enclosures, precision components, and safety fencing & guarding solutions that meet stringent quality standards.',
-      image: '/images/fabrication.jpg',
+      image: asset('/images/fabrication.jpg'),
       features: ['Stainless Steel fabrication', 'Mild Steel fabrication', 'Aluminium fabrication', 'Industrial structures', 'Machine enclosures', 'Precision components'],
       icon: '🏗️'
     },
     {
       title: 'In-house Design Services',
       description: 'Leveraging advanced CAD software, our skilled engineers provide specialized design services for Fixtures, Tooling, and complete machine layouts, ensuring optimal performance and cost-efficiency.',
-      image: '/images/Jigs and Fixture and Tooling.png',
+      image: asset('/images/Jigs and Fixture and Tooling.png'),
       features: ['Advanced CAD software', 'Fixture design', 'Tooling design', 'Machine layouts', 'Performance optimization', 'Cost-efficiency analysis'],
       icon: '📐'
     },
     {
       title: 'Component Dealing (Industrial Spares & Equipment)',
       description: 'We facilitate the sourcing and supply of high-quality engineering bought-out items. Our extensive network includes leading brands for pneumatics, hydraulics, electrical components, motors, sensors, and bearings.',
-      image: '/images/Pneumatic,-Make Festo-SMC-Janatic-Airmax-Marcury.png',
+      image: asset('/images/Pneumatic,-Make Festo-SMC-Janatic-Airmax-Marcury.png'),
       features: ['Pneumatic components', 'Hydraulic systems', 'Electrical components', 'Motors & gearboxes', 'Industrial sensors', 'Bearings & belts'],
       icon: '🔧'
     }
   ]
 
   const softwareServices = [
-    { title: 'SolidWorks', description: 'Professional 3D CAD design and engineering software for assembly, sheet metal, 2D drafting, weldment, and bill of materials.', image: '/images/Software sevices/Solid Works.jpg', features: ['Assembly design', 'Sheet metal design', '2D drafting', 'Weldment design', 'Bill of materials'], icon: '🔧' },
-    { title: 'Solid Edge', description: 'Advanced 3D CAD software for assembly, sheet metal, 2D drafting, weldment, and bill of materials with superior modeling capabilities.', image: '/images/Software sevices/Solid Edge.png', features: ['Assembly design', 'Sheet metal design', '2D drafting', 'Weldment design', 'Bill of materials'], icon: '⚙️' },
-    { title: 'AutoCAD 2D', description: 'Industry-standard 2D CAD software for plant design, plan plotting, steel structure design, and civil building projects.', image: '/images/Software sevices/Autocad.jpg', features: ['Plant design', 'Plan plotting', 'Steel structure design', 'Civil building design'], icon: '📐' },
-    { title: 'AutoCAD Plant 3D', description: 'Specialized 3D plant design software for pipe routing, ducting, isometric drawings, MTO, BQ, equipment design, and structure design.', image: '/images/Software sevices/autocad 3d.png', features: ['3D pipe routing', 'Ducting design', 'Isometric drawings', 'MTO & BQ', 'Equipment design', 'Structure design', 'Catalog creation', 'Spec editing'], icon: '🏭' },
-    { title: 'Navis', description: 'Advanced 3D model coordination and collaboration software for model merging and usage in complex engineering projects.', image: '/images/Software sevices/navis.jpg', features: ['Model merging', '3D coordination', 'Clash detection', 'Project collaboration', 'Model usage optimization'], icon: '🔗' }
+    { title: 'SolidWorks', description: 'Professional 3D CAD design and engineering software for assembly, sheet metal, 2D drafting, weldment, and bill of materials.', image: asset('/images/Software sevices/Solid Works.jpg'), features: ['Assembly design', 'Sheet metal design', '2D drafting', 'Weldment design', 'Bill of materials'], icon: '🔧' },
+    { title: 'Solid Edge', description: 'Advanced 3D CAD software for assembly, sheet metal, 2D drafting, weldment, and bill of materials with superior modeling capabilities.', image: asset('/images/Software sevices/Solid Edge.png'), features: ['Assembly design', 'Sheet metal design', '2D drafting', 'Weldment design', 'Bill of materials'], icon: '⚙️' },
+    { title: 'AutoCAD 2D', description: 'Industry-standard 2D CAD software for plant design, plan plotting, steel structure design, and civil building projects.', image: asset('/images/Software sevices/Autocad.jpg'), features: ['Plant design', 'Plan plotting', 'Steel structure design', 'Civil building design'], icon: '📐' },
+    { title: 'AutoCAD Plant 3D', description: 'Specialized 3D plant design software for pipe routing, ducting, isometric drawings, MTO, BQ, equipment design, and structure design.', image: asset('/images/Software sevices/autocad 3d.png'), features: ['3D pipe routing', 'Ducting design', 'Isometric drawings', 'MTO & BQ', 'Equipment design', 'Structure design', 'Catalog creation', 'Spec editing'], icon: '🏭' },
+    { title: 'Navis', description: 'Advanced 3D model coordination and collaboration software for model merging and usage in complex engineering projects.', image: asset('/images/Software sevices/navis.jpg'), features: ['Model merging', '3D coordination', 'Clash detection', 'Project collaboration', 'Model usage optimization'], icon: '🔗' }
   ]
 
   const componentBrands = [
-    { category: 'Pneumatics', brands: ['Festo', 'SMC', 'Janatic', 'Airmax', 'Mercury'], image: '/images/Pneumatic,-Make Festo-SMC-Janatic-Airmax-Marcury.png' },
-    { category: 'Hydraulics', brands: ['High-pressure systems', 'Hydraulic pumps', 'Valves & actuators'], image: '/images/Gemini_Generated_Image_rh6vvqrh6vvqrh6v.png' },
-    { category: 'Electrical Components', brands: ['Mitsubishi PLCs', 'Siemens PLCs', 'Sensors', 'Drives', 'Control panels'], image: '/images/Gemini_Generated_Image_bbpu4nbbpu4nbbpu.png' },
-    { category: 'Motors & Gear Boxes', brands: ['AC/DC Motors', 'Servo motors', 'Gear reducers', 'Variable frequency drives'], image: '/images/Gear Box- and eletric Motor.png' },
-    { category: 'Sensors', brands: ['P&F', 'Baumer', 'Banner', 'Proximity sensors', 'Photoelectric sensors'], image: '/images/Sensors-Make P&F-Baumer-Banner.png' },
-    { category: 'Bearings', brands: ['SKF', 'Hiwin', 'Linear bearings', 'Ball bearings', 'Roller bearings'], image: '/images/Belt-Timing and Bearing.png' }
+    { category: 'Pneumatics', brands: ['Festo', 'SMC', 'Janatic', 'Airmax', 'Mercury'], image: asset('/images/Pneumatic,-Make Festo-SMC-Janatic-Airmax-Marcury.png') },
+    { category: 'Hydraulics', brands: ['High-pressure systems', 'Hydraulic pumps', 'Valves & actuators'], image: asset('/images/Gemini_Generated_Image_rh6vvqrh6vvqrh6v.png') },
+    { category: 'Electrical Components', brands: ['Mitsubishi PLCs', 'Siemens PLCs', 'Sensors', 'Drives', 'Control panels'], image: asset('/images/Gemini_Generated_Image_bbpu4nbbpu4nbbpu.png') },
+    { category: 'Motors & Gear Boxes', brands: ['AC/DC Motors', 'Servo motors', 'Gear reducers', 'Variable frequency drives'], image: asset('/images/Gear Box- and eletric Motor.png') },
+    { category: 'Sensors', brands: ['P&F', 'Baumer', 'Banner', 'Proximity sensors', 'Photoelectric sensors'], image: asset('/images/Sensors-Make P&F-Baumer-Banner.png') },
+    { category: 'Bearings', brands: ['SKF', 'Hiwin', 'Linear bearings', 'Ball bearings', 'Roller bearings'], image: asset('/images/Belt-Timing and Bearing.png') }
   ]
 
   return (

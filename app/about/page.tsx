@@ -1,3 +1,4 @@
+import { asset } from '@/lib/asset'
 import AnimatedImage from '../components/AnimatedImage'
 import PageHero from '../components/PageHero'
 import SectionHeader from '../components/SectionHeader'
@@ -79,7 +80,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-80 sm:h-96 rounded-2xl overflow-hidden shadow-card-hover">
               <AnimatedImage
-                src="/images/Our Story.png"
+                src={asset('/images/Our Story.png')}
                 alt="Our Story - TM Tech Solutions Journey"
                 fill
                 className="object-cover"
@@ -185,7 +186,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-80 sm:h-96 rounded-2xl overflow-hidden shadow-card-hover">
               <AnimatedImage
-                src="/images/our team.png"
+                src={asset('/images/our team.png')}
                 alt="Our Team - TM Tech Solutions"
                 fill
                 className="object-cover"

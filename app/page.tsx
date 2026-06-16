@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { asset } from '@/lib/asset'
 import AnimatedImage from './components/AnimatedImage'
 import AnimatedServiceCard from './components/AnimatedServiceCard'
 import ImagePreloader from './components/ImagePreloader'
@@ -8,37 +9,37 @@ export default function HomePage() {
   const products = [
     {
       name: 'Conveyors',
-      image: '/images/Conveyor.png',
+      image: asset('/images/Conveyor.png'),
       description: 'Efficient material handling solutions',
       href: '/products#conveyors'
     },
     {
       name: 'Rotary Tables',
-      image: '/images/Rotary Table (Turn Table).png',
+      image: asset('/images/Rotary Table (Turn Table).png'),
       description: 'Precision positioning systems',
       href: '/products#material-handling'
     },
     {
       name: 'Special Purpose Machines',
-      image: '/images/Semi Auto Duct Cutting Machine.png',
+      image: asset('/images/Semi Auto Duct Cutting Machine.png'),
       description: 'Custom automation solutions',
       href: '/products#spm'
     },
     {
       name: 'Bowl & Vibratory Feeders',
-      image: '/images/Auto Fabric Strip Feeding Machine.png',
+      image: asset('/images/Auto Fabric Strip Feeding Machine.png'),
       description: 'Automated feeding systems',
       href: '/products#feeders'
     },
     {
       name: 'Jigs and Fixtures',
-      image: '/images/Jigs and Fixture and Tooling.png',
+      image: asset('/images/Jigs and Fixture and Tooling.png'),
       description: 'Precision tooling solutions',
       href: '/products#tooling'
     },
     {
       name: 'Industrial Trolleys',
-      image: '/images/Trolley and Lifting Tackle 2.png',
+      image: asset('/images/Trolley and Lifting Tackle 2.png'),
       description: 'Material handling equipment',
       href: '/products#material-handling'
     }
@@ -80,10 +81,10 @@ export default function HomePage() {
   ]
 
   const criticalImages = [
-    '/images/In House Machine Setup.png',
-    '/images/Conveyor.png',
-    '/images/Rotary Table (Turn Table).png',
-    '/images/Semi Auto Duct Cutting Machine.png'
+    asset('/images/In House Machine Setup.png'),
+    asset('/images/Conveyor.png'),
+    asset('/images/Rotary Table (Turn Table).png'),
+    asset('/images/Semi Auto Duct Cutting Machine.png'),
   ]
 
   return (

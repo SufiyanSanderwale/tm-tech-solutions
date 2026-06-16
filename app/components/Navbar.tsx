@@ -1,5 +1,6 @@
 'use client'
 
+import { asset } from '@/lib/asset'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
@@ -53,7 +54,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
               <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden ring-2 ring-primary-500/20 group-hover:ring-primary-500/50 transition-all duration-300">
                 <Image
-                  src="/images/LOGO.jpg"
+                  src={asset('/images/LOGO.jpg')}
                   alt="TM Tech Solutions Logo"
                   fill
                   className="object-contain"
