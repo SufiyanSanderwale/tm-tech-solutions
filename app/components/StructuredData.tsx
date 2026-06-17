@@ -1,13 +1,11 @@
-import { asset } from '@/lib/asset'
-
 export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "TM Tech Solutions",
     "description": "Leading provider of innovative automation and fabrication solutions in Pune. Special Purpose Machines, Custom Automation, Fabrication Work, and Industrial Components.",
-    "url": "https://tmtechsolutions.in",
-    "logo": `https://tmtechsolutions.in${asset('/images/LOGO.jpg')}`,
+    "url": "https://www.tmtechsolutions.in",
+    "logo": "https://www.tmtechsolutions.in/favicon.png",
     "foundingDate": "2021",
     "address": [
       {

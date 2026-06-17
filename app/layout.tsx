@@ -30,15 +30,23 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://tmtechsolutions.in'),
+  metadataBase: new URL('https://www.tmtechsolutions.in'),
   alternates: {
     canonical: '/',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/favicon.png', type: 'image/png', sizes: '192x192' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
   manifest: '/manifest.json',
   openGraph: {
     title: 'TM Tech Solutions - Innovative Automation and Fabrication Solutions',
     description: 'Leading provider of innovative automation and fabrication solutions in Pune. Special Purpose Machines, Custom Automation, Fabrication Work, and Industrial Components.',
-    url: 'https://tmtechsolutions.in',
+    url: 'https://www.tmtechsolutions.in',
     siteName: 'TM Tech Solutions',
     images: [
       {
@@ -103,6 +111,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//localhost:3000" />
         <link rel="preload" as="image" href={asset('/images/In House Machine Setup.png')} />
         <link rel="preload" as="image" href={asset('/images/LOGO.jpg')} />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
       </head>
       <body className={`${inter.className} antialiased`}>
         <GoogleAnalytics />
