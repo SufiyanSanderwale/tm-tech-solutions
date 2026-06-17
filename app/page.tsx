@@ -1,9 +1,16 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 import { asset } from '@/lib/asset'
 import AnimatedImage from './components/AnimatedImage'
 import AnimatedServiceCard from './components/AnimatedServiceCard'
 import ImagePreloader from './components/ImagePreloader'
 import SectionHeader from './components/SectionHeader'
+
+export const metadata: Metadata = {
+  title: 'TM Tech Solutions | Industrial Automation & Fabrication Solutions in Pune',
+  description:
+    'TM Tech Solutions provides industrial automation, fabrication, conveyors, rotary tables, special purpose machines, safety fencing, and custom engineering solutions in Pune.',
+}
 
 export default function HomePage() {
   const products = [
