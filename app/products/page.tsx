@@ -1,8 +1,15 @@
+import { Metadata } from 'next'
 import { asset } from '@/lib/asset'
 import Link from 'next/link'
 import AnimatedImage from '../components/AnimatedImage'
 import PageHero from '../components/PageHero'
 import SectionHeader from '../components/SectionHeader'
+
+export const metadata: Metadata = {
+  title: 'Products | TM Tech Solutions',
+  description:
+    'Explore conveyors, special purpose machines, material handling systems, feeding systems, tooling, fixtures, and industrial automation products from TM Tech Solutions.',
+}
 
 export default function ProductsPage() {
   const productCategories = [
