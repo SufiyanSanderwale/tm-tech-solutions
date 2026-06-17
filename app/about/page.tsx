@@ -1,7 +1,14 @@
+import { Metadata } from 'next'
 import { asset } from '@/lib/asset'
 import AnimatedImage from '../components/AnimatedImage'
 import PageHero from '../components/PageHero'
 import SectionHeader from '../components/SectionHeader'
+
+export const metadata: Metadata = {
+  title: 'About Us | TM Tech Solutions',
+  description:
+    'Learn about TM Tech Solutions, a leading provider of industrial automation, fabrication, and engineering solutions in Pune.',
+}
 
 export default function AboutPage() {
   const whyChooseUs = [
