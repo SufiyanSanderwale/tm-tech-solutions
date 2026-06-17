@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://tmtechsolutions.com'),
+  metadataBase: new URL('https://tmtechsolutions.in'),
   alternates: {
     canonical: '/',
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'TM Tech Solutions - Innovative Automation and Fabrication Solutions',
     description: 'Leading provider of innovative automation and fabrication solutions in Pune. Special Purpose Machines, Custom Automation, Fabrication Work, and Industrial Components.',
-    url: 'https://tmtechsolutions.com',
+    url: 'https://tmtechsolutions.in',
     siteName: 'TM Tech Solutions',
     images: [
       {
