@@ -6,8 +6,8 @@ export default function StructuredData() {
     "@type": "Organization",
     "name": "TM Tech Solutions",
     "description": "Leading provider of innovative automation and fabrication solutions in Pune. Special Purpose Machines, Custom Automation, Fabrication Work, and Industrial Components.",
-    "url": "https://tmtechsolutions.com",
-    "logo": `https://tmtechsolutions.com${asset('/images/LOGO.jpg')}`,
+    "url": "https://tmtechsolutions.in",
+    "logo": `https://tmtechsolutions.in${asset('/images/LOGO.jpg')}`,
     "foundingDate": "2021",
     "address": [
       {
