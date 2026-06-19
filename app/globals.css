@@ -148,7 +148,7 @@
       height: auto;
       object-fit: contain;
       object-position: center;
-      transform: translateY(-3.0cm);
+      transform: translateY(-3.2cm);
       transition: width 0.3s ease, height 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
     }
   }
