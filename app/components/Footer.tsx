@@ -63,14 +63,26 @@ export default function Footer() {
                 { name: 'Services', href: '/services' },
                 { name: 'Careers', href: '/careers' },
                 { name: 'Contact Us', href: '/contact' },
+                { name: 'Download Brochure', href: '/Brochure/TM-Tech-Solutions-Brochure.pdf', isDownload: true },
               ].map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="block text-dark-400 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm"
-                >
-                  {link.name}
-                </Link>
+                link.isDownload ? (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    download="TM-Tech-Solutions-Brochure.pdf"
+                    className="block text-dark-400 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm"
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="block text-dark-400 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                )
               ))}
             </div>
           </div>

@@ -146,6 +146,16 @@ export default function HomePage() {
             <Link href="/contact" className="btn-outline btn-mobile text-mobile-base px-8 py-4 w-full sm:w-auto">
               Get Free Consultation
             </Link>
+            <a
+              href="/Brochure/TM-Tech-Solutions-Brochure.pdf"
+              download="TM-Tech-Solutions-Brochure.pdf"
+              className="btn-outline btn-mobile text-mobile-base px-8 py-4 w-full sm:w-auto flex items-center justify-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Brochure
+            </a>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-16 sm:mt-20 max-w-3xl mx-auto">

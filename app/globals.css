@@ -21,7 +21,12 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-jakarta), system-ui, sans-serif;
   }
 }
@@ -143,7 +148,7 @@
       height: auto;
       object-fit: contain;
       object-position: center;
-      transform: translateY(-2.2cm);
+      transform: translateY(-3.0cm);
       transition: width 0.3s ease, height 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
     }
   }
@@ -185,7 +190,9 @@
       padding-bottom: 4rem;
     }
 
-    html, body, .page-hero-gradient {
+    html,
+    body,
+    .page-hero-gradient {
       overflow-x: hidden;
     }
   }
@@ -242,8 +249,13 @@
   }
 
   @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
   }
 
   .animate-float {
@@ -251,8 +263,15 @@
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   .animate-pulse-slow {
@@ -268,8 +287,15 @@
   }
 
   @keyframes wiggle {
-    0%, 100% { transform: rotate(-3deg); }
-    50% { transform: rotate(3deg); }
+
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+
+    50% {
+      transform: rotate(3deg);
+    }
   }
 
   .animate-zoom-in {
@@ -277,8 +303,15 @@
   }
 
   @keyframes zoomIn {
-    0% { transform: scale(0.8); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 
   .animate-fade-in {
@@ -286,8 +319,15 @@
   }
 
   @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .image-loading {
@@ -297,8 +337,13 @@
   }
 
   @keyframes loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
+    }
   }
 
   img {
